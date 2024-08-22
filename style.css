@@ -91,9 +91,9 @@ body {
   animation-timing-function: linear;
 }
 
-/* .icon-container:hover {
+.icon-container:hover {
   --distance : -200px;
-} */
+}
 
 .icon:nth-child(1) {
   transform: rotate(0) translateY( var(--distance) ) rotate(0);
