@@ -36,7 +36,7 @@ body {
   margin: auto;
   width: 300px;
   aspect-ratio: 1/1;
-  box-shadow: inset 0 0 20px;
+  /* box-shadow: inset 0 0 20px; */
   color: rebeccapurple;
   position: relative;
 }
@@ -52,65 +52,98 @@ body {
   border-radius: 50%;
 }
 
+
+.icon-container {
+  width: 100%;
+  height: 100%;
+
+  --distance : -400px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  animation-name: spin;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 .icon {
-  border-top: 5px solid red;
+
   width: 100px;
   height: 100px;
   position: absolute;
   inset: 0;
   margin: auto;
+  pointer-events: none;
+
+  transition: 1.5s ease-in-out;
+  
 }
+
+/* .icon img {
+
+  animation-name: spin;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: linear;
+} */
+
+/* .icon-container:hover {
+  --distance : -200px;
+} */
 
 .icon:nth-child(1) {
-  transform: rotate(0) translateY(-400px) rotate(0);
+  transform: rotate(0) translateY( var(--distance) ) rotate(0);
 }
 .icon:nth-child(2) {
-  transform: rotate(45deg) translateY(-400px) rotate(-45deg);
+  transform: rotate(45deg) translateY( var(--distance) ) rotate(-45deg);
 }
 .icon:nth-child(3) {
-  transform: rotate(90deg) translateY(-400px) rotate(-90deg);
+  transform: rotate(90deg) translateY( var(--distance) ) rotate(-90deg);
 }
 .icon:nth-child(4) {
-  transform: rotate(135deg) translateY(-400px) rotate(-135deg);
+  transform: rotate(135deg) translateY( var(--distance) ) rotate(-135deg);
 }
 .icon:nth-child(5) {
-  transform: rotate(180deg) translateY(-400px) rotate(-180deg);
+  transform: rotate(180deg) translateY( var(--distance) ) rotate(-180deg);
 }
 .icon:nth-child(6) {
-  transform: rotate(225deg) translateY(-400px) rotate(-225deg);
+  transform: rotate(225deg) translateY( var(--distance) ) rotate(-225deg);
 }
 .icon:nth-child(7) {
-  transform: rotate(270deg) translateY(-400px) rotate(-270deg);
+  transform: rotate(270deg) translateY( var(--distance) ) rotate(-270deg);
 }
 .icon:nth-child(8) {
-  transform: rotate(315deg) translateY(-400px) rotate(-315deg);
+  transform: rotate(315deg) translateY( var(--distance) ) rotate(-315deg);
 }
 
-.circle:hover .icon:nth-child(1) {
-  transform: rotate(0) translateY(-200px) rotate(0);
+/* .circle:hover .icon:nth-child(1) {
+  transition-delay: 0.1s;
 }
-
 .circle:hover .icon:nth-child(2) {
-  transform: rotate(45deg) translateY(-200px) rotate(-45deg);
+  transition-delay: 0.2s;
 }
 .circle:hover .icon:nth-child(3) {
-  transform: rotate(90deg) translateY(-200px) rotate(-90deg);
+  transition-delay: 0.3s;
 }
 .circle:hover .icon:nth-child(4) {
-  transform: rotate(135deg) translateY(-200px) rotate(-135deg);
+  transition-delay: 0.4s;
 }
 .circle:hover .icon:nth-child(5) {
-  transform: rotate(180deg) translateY(-200px) rotate(-180deg);
+  transition-delay: 0.5s;
 }
 .circle:hover .icon:nth-child(6) {
-  transform: rotate(225deg) translateY(-200px) rotate(-225deg);
+  transition-delay: 0.6s;
 }
 .circle:hover .icon:nth-child(7) {
-  transform: rotate(270deg) translateY(-200px) rotate(-270deg);
+  transition-delay: 0.7s;
 }
 .circle:hover .icon:nth-child(8) {
-  transform: rotate(315deg) translateY(-200px) rotate(-315deg);
-}
+  transition-delay: 0.8s;
+} */
 
 @keyframes spin {
   0% {
@@ -121,3 +154,4 @@ body {
     transform: rotate(360deg);
   }
 }
+
